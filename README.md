@@ -45,7 +45,7 @@ menu := gocliselectv2.NewMenu("Choose an operation", gocliselectv2.WithSelectedC
 Add any number of options by calling `AddItem()` supplying the display text of the option
 as well as the id.
 
-You can add also a shortcut key to any item:
+You can add also a shortcut key to any item (available shortcuts are letters and numbers only: [a-z] or [A-Z] or [0-9]):
 ```go
 menu.AddItemWithShortcutKey("List", "list", gocliselectv2.Key_l)
 menu.AddItemWithShortcutKey("Get", "get", gocliselectv2.Key_g)
