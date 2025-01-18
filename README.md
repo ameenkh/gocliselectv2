@@ -25,6 +25,11 @@ Lightweight interactive CLI selection library
 | pageSize       | Defines the number of steps to move the cursor when clicking page up/down.  Default value is `3`             | WithPageSize       |
 | printShortcuts | If false, then the item text won't be printed with the shortcut key prefix `[key]`.  Default value is `true` | WithPrintShortcuts |
 
+## Install the package
+```shell
+go get github.com/ameenkh/gocliselectv2
+```
+
 ## Import the package
 ```go
 import "github.com/ameenkh/gocliselectv2"
