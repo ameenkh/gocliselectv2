@@ -1,20 +1,25 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"github.com/nexidian/gocliselect"
+	"github.com/ameenkh/gocliselectv2"
+	"io"
 )
 
 func main() {
-	menu := gocliselect.NewMenu("Chose a colour")
+	menu := gocliselectv2.NewMenu("Chose a colour")
 
-	menu.AddItem("Red", "red")
-	menu.AddItem("Blue", "blue")
+	menu.AddItemWithShortcutKey("Red", "red", gocliselectv2.Key_r)
+	menu.AddItemWithShortcutKey("Blue", "blue", gocliselectv2.Key_b)
 	menu.AddItem("Green", "green")
 	menu.AddItem("Yellow", "yellow")
 	menu.AddItem("Cyan", "cyan")
 
-	choice := menu.Display()
-
-	fmt.Printf("Choice: %s\n", choice)
+	choice, err := menu.Display()
+	if errors.Is(err, io.EOF) {
+		fmt.Printf("interrupted...")
+	} else {
+		fmt.Printf("Choice: %s\n", choice)
+	}
 }

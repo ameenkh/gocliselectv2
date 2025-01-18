@@ -1,4 +1,4 @@
-package gocliselect
+package gocliselectv2
 
 import "github.com/buger/goterm"
 
