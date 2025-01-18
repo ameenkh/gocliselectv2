@@ -1,4 +1,4 @@
-# Golang CLI Select
+# Golang CLI Select V2
 Lightweight interactive CLI selection library 
 
 ![](https://media.giphy.com/media/Nmc3muJhaCfPe2LWd9/giphy.gif)
@@ -6,7 +6,7 @@ Lightweight interactive CLI selection library
 
 ## Import the package
 ```go
-import "github.com/nexidian/gocliselect"
+import "github.com/ameenkh/gocliselectv2"
 ```
 
 ## Usage

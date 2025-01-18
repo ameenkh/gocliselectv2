@@ -1,4 +1,4 @@
-module github.com/nexidian/gocliselect
+module github.com/ameenkh/gocliselectv2
 
 go 1.23
 
