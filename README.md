@@ -54,7 +54,7 @@ func main() {
 
 	choice, err := menu.Display()
 	if errors.Is(err, io.EOF) {
-		fmt.Printf("interrupted...")
+		fmt.Printf("interrupted...") // in case of ctrl+c or ctrl+d
 	} else {
 		fmt.Printf("Choice: %s\n", choice)
 	}
