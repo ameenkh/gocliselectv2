@@ -8,13 +8,12 @@ import (
 )
 
 func main() {
-	menu := gocliselectv2.NewMenu("Chose a colour")
+	menu := gocliselectv2.NewMenu("Choose an operation", gocliselectv2.WithSelectedColor(gocliselectv2.RED), gocliselectv2.WithPageSize(3))
 
-	menu.AddItemWithShortcutKey("Red", "red", gocliselectv2.Key_r)
-	menu.AddItemWithShortcutKey("Blue", "blue", gocliselectv2.Key_b)
-	menu.AddItem("Green", "green")
-	menu.AddItem("Yellow", "yellow")
-	menu.AddItem("Cyan", "cyan")
+	menu.AddItemWithShortcutKey("List", "list", gocliselectv2.Key_l)
+	menu.AddItemWithShortcutKey("Get", "get", gocliselectv2.Key_g)
+	menu.AddItem("Post", "post")
+	menu.AddItem("Delete", "delete")
 
 	choice, err := menu.Display()
 	if errors.Is(err, io.EOF) {
